@@ -68,5 +68,21 @@
   "effect.morepotions.leap": "Lifting Winds",
   "item.minecraft.potion.effect.leap_potion": "Potion of Lifting Winds",
   "item.minecraft.splash_potion.effect.leap_potion": "Splash Potion of Lifting Winds",
-  "item.minecraft.lingering_potion.effect.leap_potion": "Lingering Potion of Lifting Winds"
+  "item.minecraft.lingering_potion.effect.leap_potion": "Lingering Potion of Lifting Winds",
+
+  "effect.morepotions.fire": "Inferno",
+  "item.minecraft.potion.effect.fire_potion": "Potion of Inferno",
+  "item.minecraft.splash_potion.effect.fire_potion": "Splash Potion of Inferno",
+  "item.minecraft.lingering_potion.effect.fire_potion": "Lingering Potion of Inferno",
+
+  "effect.morepotions.climbing": "Spider Climbing",
+  "item.minecraft.potion.effect.climbing_potion": "Potion of Spider Climbing",
+  "item.minecraft.potion.effect.climbing_potion_longer": "Potion of Spider Climbing",
+  "item.minecraft.potion.effect.climbing_potion_amplified": "Potion of Spider Climbing",
+  "item.minecraft.splash_potion.effect.climbing_potion": "Splash Potion of Spider Climbing",
+  "item.minecraft.splash_potion.effect.climbing_potion_longer": "Splash Potion of Spider Climbing",
+  "item.minecraft.splash_potion.effect.climbing_potion_amplified": "Splash Potion of Spider Climbing",
+  "item.minecraft.lingering_potion.effect.climbing_potion": "Lingering Potion of Spider Climbing",
+  "item.minecraft.lingering_potion.effect.climbing_potion_longer": "Lingering Potion of Spider Climbing",
+  "item.minecraft.lingering_potion.effect.climbing_potion_amplified": "Lingering Potion of Spider Climbing"
 }

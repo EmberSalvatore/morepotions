@@ -1,25 +1,35 @@
 package net.embersalvatore.events;
 
+import net.embersalvatore.DevUtility;
 import net.embersalvatore.MorePotions;
 import net.embersalvatore.effects.ModEffects;
+import net.embersalvatore.potions.ModPotions;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.SplashPotionItem;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.entity.living.LivingDamageEvent;
-import net.minecraftforge.event.entity.living.LivingGetProjectileEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.living.*;
 import net.minecraftforge.event.entity.player.PlayerDestroyItemEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+
+import java.util.List;
 
 @Mod.EventBusSubscriber(modid = MorePotions.MODID)
 public class ModEvents {
@@ -73,7 +83,52 @@ public class ModEvents {
     }
 
     @SubscribeEvent
+    public static void onEntityTick(LivingEvent.LivingTickEvent event){
+
+    }
+
+    @SubscribeEvent
     public static void onProjectile(ProjectileImpactEvent event){
+
+        Projectile projectile = event.getProjectile();
+        HitResult hitResult = event.getRayTraceResult();
+
+        if(projectile instanceof ThrownPotion){
+            ThrownPotion potion = (ThrownPotion) projectile;
+
+            boolean containsFireEffect = false;
+            List<MobEffectInstance> potions = PotionUtils.getPotion(potion.getItem()).getEffects();
+
+            for(int i = 0; i < potions.toArray().length; i++){
+                if(potions.get(i).getEffect() == ModEffects.FIRE.get()){
+                   containsFireEffect = true;
+                }
+            }
+
+            if(containsFireEffect){
+
+                Vec3 position = event.getRayTraceResult().getLocation();
+                BlockPos pos = new BlockPos(((int) position.x),(int) position.y,(int) position.z - 1);
+
+                /*for(int i = 0; i < 25; i++){
+                    Double randomX = projectile.level().random.nextDouble() * 3;
+                    Double randomZ = projectile.level().random.nextDouble() * 3;
+
+                    //DevUtility.simpleChatMessage(projectile.level().getNearestPlayer(projectile, 100), "" + randomX);
+
+
+                    projectile.level().addAlwaysVisibleParticle(ParticleTypes.FLAME, position.x+randomX, position.y+1, position.z+randomZ, 0, 0, 0);
+                }*/
+
+
+                if(hitResult.getType() == HitResult.Type.BLOCK){
+                    if(projectile.level().getBlockState(pos).isAir()){
+                        projectile.level().setBlockAndUpdate(pos, Blocks.FIRE.defaultBlockState());
+                    }
+                }
+            }
+        }
+
         /*
         Entity projectile = event.getEntity();
         String projectileName = event.getProjectile().getDisplayName().getString();

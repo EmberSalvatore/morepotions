@@ -1,10 +1,8 @@
 package net.embersalvatore.effects;
 
 import net.embersalvatore.MorePotions;
-import net.embersalvatore.effects.beneficial.AcrobaticsEffect;
-import net.embersalvatore.effects.beneficial.ArcheryEffect;
-import net.embersalvatore.effects.beneficial.GhostEffect;
-import net.embersalvatore.effects.beneficial.MartyrEffect;
+import net.embersalvatore.effects.beneficial.*;
+import net.embersalvatore.effects.harmful.FireEffect;
 import net.embersalvatore.effects.harmful.LightningEffect;
 import net.embersalvatore.effects.harmful.SinkingEffect;
 import net.embersalvatore.effects.harmful.WeightEffect;
@@ -38,6 +36,10 @@ public class ModEffects {
     //public static final RegistryObject<MobEffect> GHOST = MOB_EFFECTS.register("ghost", () -> new GhostEffect(MobEffectCategory.BENEFICIAL, 2044262));
 
     public static final RegistryObject<MobEffect> MARTYR = MOB_EFFECTS.register("martyr", () -> new MartyrEffect(MobEffectCategory.BENEFICIAL, 14735421));
+
+    public static final RegistryObject<MobEffect> FIRE = MOB_EFFECTS.register("fire", () -> new FireEffect(MobEffectCategory.HARMFUL, 12405007));
+
+    public static final RegistryObject<MobEffect> CLIMBING = MOB_EFFECTS.register("climbing", () -> new ClimbingEffect(MobEffectCategory.BENEFICIAL, 1783626));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

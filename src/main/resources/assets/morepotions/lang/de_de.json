@@ -68,5 +68,21 @@
   "effect.morepotions.leap": "Erhebende Winde",
   "item.minecraft.potion.effect.leap_potion": "Trank der erhebenden Winde",
   "item.minecraft.splash_potion.effect.leap_potion": "Wurftrank der erhebenden Winde",
-  "item.minecraft.lingering_potion.effect.leap_potion": "Verweiltrank der erhebenden Winde"
+  "item.minecraft.lingering_potion.effect.leap_potion": "Verweiltrank der erhebenden Winde",
+
+  "effect.morepotions.fire": "Inferno",
+  "item.minecraft.potion.effect.fire_potion": "Trank des Infernos",
+  "item.minecraft.splash_potion.effect.fire_potion": "Wurftrank des Infernos",
+  "item.minecraft.lingering_potion.effect.fire_potion": "Verweiltrank des Infernos",
+
+  "effect.morepotions.climbing": "Spinnenhände",
+  "item.minecraft.potion.effect.climbing_potion": "Trank der Spinnenhände",
+  "item.minecraft.potion.effect.climbing_potion_longer": "Trank der Spinnenhände",
+  "item.minecraft.potion.effect.climbing_potion_amplified": "Trank der Spinnenhände",
+  "item.minecraft.splash_potion.effect.climbing_potion": "Wurftrank der Spinnenhände",
+  "item.minecraft.splash_potion.effect.climbing_potion_longer": "Wurftrank der Spinnenhände",
+  "item.minecraft.splash_potion.effect.climbing_potion_amplified": "Wurftrank der Spinnenhände",
+  "item.minecraft.lingering_potion.effect.climbing_potion": "Verweiltrank der Spinnenhände",
+  "item.minecraft.lingering_potion.effect.climbing_potion_longer": "Verweiltrank der Spinnenhände",
+  "item.minecraft.lingering_potion.effect.climbing_potion_amplified": "Verweiltrank der Spinnenhände"
 }

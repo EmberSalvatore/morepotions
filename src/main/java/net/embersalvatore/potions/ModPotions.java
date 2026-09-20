@@ -64,6 +64,24 @@ public class ModPotions {
     public static final RegistryObject<Potion> MARTYR_POTION_AMPLIFIED = POTIONS.register("martyr_potion_amplified",
             () -> new Potion(new MobEffectInstance(ModEffects.MARTYR.get(), 90*20, 1)));
 
+    public static final RegistryObject<Potion> FIRE_POTION = POTIONS.register("fire_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.FIRE.get(), 20*20, 0)));
+
+    public static final RegistryObject<Potion> FIRE_POTION_LONGER = POTIONS.register("fire_potion_longer",
+            () -> new Potion(new MobEffectInstance(ModEffects.FIRE.get(), 40*20, 0)));
+
+    public static final RegistryObject<Potion> FIRE_POTION_AMPLIFIED = POTIONS.register("fire_potion_amplified",
+            () -> new Potion(new MobEffectInstance(ModEffects.FIRE.get(), 10*20, 1)));
+
+    public static final RegistryObject<Potion> CLIMBING_POTION = POTIONS.register("climbing_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.CLIMBING.get(), 180*20, 0)));
+
+    public static final RegistryObject<Potion> CLIMBING_POTION_LONGER = POTIONS.register("climbing_potion_longer",
+            () -> new Potion(new MobEffectInstance(ModEffects.CLIMBING.get(), 480*20, 0)));
+
+    public static final RegistryObject<Potion> CLIMBING_POTION_AMPLIFIED = POTIONS.register("climbing_potion_amplified",
+            () -> new Potion(new MobEffectInstance(ModEffects.CLIMBING.get(), 90*20, 1)));
+
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);
     }

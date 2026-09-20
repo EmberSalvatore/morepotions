@@ -73,7 +73,13 @@ public class MorePotions
         BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.MARTYR_POTION.get(), Items.REDSTONE, ModPotions.MARTYR_POTION_LONGER.get()));
         BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.MARTYR_POTION.get(), Items.GLOWSTONE_DUST, ModPotions.MARTYR_POTION_AMPLIFIED.get()));
 
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, Items.MAGMA_BLOCK, ModPotions.FIRE_POTION.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.FIRE_POTION.get(), Items.REDSTONE, ModPotions.FIRE_POTION_LONGER.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.FIRE_POTION.get(), Items.GLOWSTONE_DUST, ModPotions.FIRE_POTION_AMPLIFIED.get()));
 
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, Items.COBWEB, ModPotions.CLIMBING_POTION.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.CLIMBING_POTION.get(), Items.REDSTONE, ModPotions.CLIMBING_POTION_LONGER.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.CLIMBING_POTION.get(), Items.GLOWSTONE_DUST, ModPotions.CLIMBING_POTION_AMPLIFIED.get()));
     }
 
     // Add the example block item to the building blocks tab
